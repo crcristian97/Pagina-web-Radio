@@ -1,0 +1,503 @@
+@import 'https://fonts.googleapis.com/css?family=Montserrat:300, 400, 700&display=swap';
+
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 10px;
+	font-family: 'Montserrat', sans-serif;
+	
+}
+a {
+	text-decoration: none;
+}
+.container {
+	min-height: 100vh;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+}
+
+p {
+	color: white;
+	font-size: 1.4rem;
+	margin-top: 5px;
+	line-height: 2.5rem;
+	font-weight: 300;
+	letter-spacing: 0.05rem;
+}
+.section-title {
+	font-size: 4rem;
+	font-weight: 300;
+	color: white;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+	letter-spacing: 0.2rem;
+	text-align: center;
+}
+.section-title span {
+	color: #99b33c;
+}
+.cta{
+	position: relative;
+	display: inline-block;
+	background-color: black;
+	padding: 25px 30px;
+	margin: 40px 0;
+	color: white;
+	font-size: 24px;
+	text-decoration: none;
+	text-transform: uppercase;
+	overflow:hidden;
+	transition: 0.5s;
+	letter-spacing: 4px;
+	border: none;
+	outline: none;
+}
+
+.cta:hover{
+	background: red;
+	color: white;
+	box-shadow: 0 0 5px red,
+				0 0 25px red,				
+				0 0 50px red,
+				0 0 200px red;
+}
+
+.active{
+	background: red;
+	color: white;
+	box-shadow: 0 0 5px red,
+				0 0 25px red,				
+				0 0 50px red,
+				0 0 200px red ;
+}
+
+.cta span{
+	position: absolute;
+	display: block;
+}
+
+.cta span:nth-child(1){
+	top: 0;
+	left: -100%;
+	width: 100%;
+	height: 2px;
+	background: linear-gradient(90deg,transparent,red);
+	animation: animate1 1s linear infinite;
+}
+
+.cta span:nth-child(2){
+	top: -100%;
+	right:	0;
+	width: 2px;
+	height: 100%;
+	background: linear-gradient(180deg,transparent,red);
+	animation: animate2 1s linear infinite;
+	animation-delay:0.25s;
+}
+.cta span:nth-child(3){
+	bottom: 0;
+	right:	-100%;
+	width: 100%;
+	height: 2px;
+	background: linear-gradient(270deg,transparent,red);
+	animation: animate3 1s linear infinite;
+	animation-delay:0.5s;
+}
+.cta span:nth-child(4){
+	bottom: -100%;
+	left:	0;
+	width: 2px;
+	height: 100%;
+	background: linear-gradient(360deg,transparent,red);
+	animation: animate4 1s linear infinite;
+	animation-delay:0.5s;
+}
+
+/* NEW NAV */
+
+nav{
+    background: black;
+}
+nav::after{
+    content: '';
+    clear: both;
+    display: table;
+}
+
+nav ul{
+    float:right;
+    list-style: none;
+    margin-right: 150px;
+    position: relative;
+	
+}
+
+nav ul li{
+
+    display: inline-block;
+    background: black;
+    margin: 0 5px;
+}
+nav ul li p{
+	color: #99b33c;
+    text-decoration: none;
+    line-height: 10px;
+    font-size: 15px;
+    padding: 5px 15px;
+}
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    line-height: 70px;
+    font-size: 18px;
+    padding: 8px 15px;
+	
+}
+nav ul li a:hover{
+    color: red;
+    border-radius: 5px;
+    box-shadow: 0 0 5px red,
+                0 0 5px red;
+}
+nav ul  ul li a:hover{
+    color: #99b33c;
+    box-shadow: none;
+}
+nav ul ul{
+    position: absolute;
+    top: 70px;
+    opacity: 0;
+    visibility: hidden;
+    transition: top .3s;
+   
+}
+nav ul li:hover > ul{
+    opacity: 1;
+    visibility: visible;
+    top: 70px;
+}
+nav ul ul li{
+    position: relative;
+    margin: 0px;
+    width: 250px;
+    float: none;
+    display: list-item;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3) ;
+}
+nav ul ul li a{
+    line-height: 50px;
+}
+nav .logo{
+    float: left;
+    color: white;
+    font-size: 27px;
+    font-weight: 600;
+    line-height: 70px;
+    padding-left: 60px;
+    display: none;
+}
+nav ul ul ul li{
+    position: relative;
+    top: -70px;
+    left: 150px;
+}
+/* END NEW NAV*/
+
+/* Hero Section */
+#hero {
+	background-image: url(/img/LaZero\ Logo\ unevo.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	z-index: 1;
+	background-color: black;
+	
+}
+
+
+#hero::after {
+	
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background-color: black;
+	opacity: 0.1;
+	z-index: -1;
+}
+#hero .hero {
+	max-width: 1500px;
+	padding: 0 20px;
+	justify-content: flex-start;
+}
+#hero .herodiv{
+letter-spacing: 4px;
+margin-bottom: 100px;
+
+}
+#hero .herodiv .mascota{
+	color: rgb(201, 212, 47);
+	font-weight: bold;
+	font-style: normal;
+}
+#hero h2 {
+     
+     width: 100px;
+	display: block;
+	width: fit-content;
+	font-size: 4rem;
+	position: relative;
+	color: transparent;
+	animation: text_reveal 0.5s ease forwards;
+	animation-delay: 1s;
+}
+
+
+
+/*Redes part2*/
+:root {
+	--facebook: #1d5be2;
+	--instagram: rgb(177, 116, 116);
+	
+	--youtube: red;
+	--twitch: purple;
+	--whatsapp: green;
+}
+.redes-container{
+	background-color: black;
+	display: flex;
+	height: 200px;
+	align-items: center;
+	justify-content: center;
+}
+
+.redes-container ul li{
+	display: inline-block;
+	margin: 0 25px;
+	width: 101px;
+	height: 70px;
+	text-align: center;
+}
+
+.redes-container ul li a{
+	display: block;
+	color: #fff;
+	font-size: 58px;
+	margin: 10px;
+	line-height: 10px;
+}
+
+
+.redes-container ul li:hover .facebook{
+	
+		box-shadow: 0 0 5px #184fc7 inset,
+					0 0 25px #184fc7,
+					0 0 50px #184fc7 inset,
+					0 0 130px #184fc7;
+		text-shadow: 0 0 5px #184fc7,
+					 0 0 5px #184fc7;
+}
+
+.redes-container ul li:hover .instagram{
+	
+		box-shadow: 0 0 5px #ad2a2a inset,
+					0 0 25px #ad2a2a,
+					0 0 50px #ad2a2a inset,
+					0 0 100px #ad2a2a;
+		text-shadow: 0 0 5px #ad2a2a,
+					 0 0 5px #ad2a2a;
+}
+
+
+
+
+.redes-container ul li:hover .youtube{
+	
+		box-shadow: 0 0 5px red inset,
+					0 0 25px red,
+					0 0 50px red inset,
+					0 0 100px red;
+		text-shadow: 0 0 5px red,
+					 0 0 5px red
+}
+
+.redes-container ul li:hover .twich{
+
+	box-shadow: 0 0 5px #74146c inset,
+				0 0 25px #74146c,
+				0 0 50px #74146c inset,
+				0 0 100px #74146c;
+	text-shadow: 0 0 5px #74146c,
+				 0 0 5px #74146c;
+}
+
+.redes-container ul li:hover .whatsapp{
+
+		box-shadow: 0 0 5px #25d366 inset,
+					0 0 25px #25d366,
+					0 0 50px #25d366 inset,
+					0 0 100px #25d366;
+		text-shadow: 0 0 5px #25d366,
+					 0 0 5px #25d366;
+}
+
+
+
+/**/
+
+/*Fin social Media*/
+.contact{
+	width: 100%;
+    height: 150px;
+    display: grid;
+	background-color: white;
+
+    place-items: center;
+}
+
+
+    
+/* Slider */
+
+/* Footer */
+#footer {
+	background-color: black ;
+}
+#footer .footer {
+	min-height: 200px;
+	flex-direction: column;
+	padding-top: 50px;
+	padding-bottom: 10px;
+}
+#footer h1{
+	color: white;
+}
+#footer h2 {
+	color: white;
+	font-weight: 500;
+	font-size: 1.8rem;
+	letter-spacing: 0.1rem;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+#footer .social-icon {
+	display: flex;
+	margin-bottom: 30px;
+}
+#footer .social-item {
+	height: 50px;
+	width: 50px;
+	margin: 0 5px;
+}
+#footer .social-item img {
+	filter: grayscale(1);
+	transition: 0.3s ease filter;
+}
+#footer .social-item:hover img {
+	filter: grayscale(0);
+}
+#footer p {
+	color: white;
+	font-size: 1.3rem;
+}
+/* End Footer */
+
+/*Audio Radio*/
+
+.audioradio{
+	display: none;
+}
+
+
+/* Keyframes */
+
+
+@keyframes text_reveal_box {
+	50% {
+		width: 100%;
+		left: 0;
+	}
+	100% {
+		width: 0;
+		left: 100%;
+	}
+}
+@keyframes text_reveal {
+	100% {
+		color: white;
+	}
+}
+@keyframes text_reveal_name {
+	100% {
+		color: #99b33c;
+		font-weight: 500;
+	}
+}
+@keyframes animate1{
+	0%{
+left: -100%;
+	}
+	50%,100%{
+		left: 100%;
+	}
+}
+@keyframes animate2{
+	0%{
+top: -100%;
+	}
+	50%,100%{
+		top: 100%;
+	}
+}
+@keyframes animate3{
+	0%{
+right: -100%;
+	}
+	50%,100%{
+		right: 100%;
+	}
+}
+@keyframes animate4{
+	0%{
+bottom: -100%;
+	}
+	50%,100%{
+		bottom: 100%;
+	}
+}
+/* End Keyframes */
+
+/* Media Query For Tablet */
+@media only screen and (min-width: 768px) {
+	.cta {
+		font-size: 2.5rem;
+		padding: 20px 60px;
+	}
+	h1.section-title {
+		font-size: 6rem;
+	}
+
+	/* Hero */
+	#hero h1 {
+		font-size: 7rem;
+	}
+	/* End Hero */
+
+	
+	
+
+	
+}
+/* End Media Query For Tablet */
+
+/* Media Query For Desktop */
